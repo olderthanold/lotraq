@@ -34,6 +34,3 @@ The current Android direct-release APK is signed with:
 Certificate SHA-256:
 
 `9442929100009509128be02aace10cae4be0fed5d678cc1408cd649e32288d5c`
-
-Earlier local test APKs used different signing keys. If you installed an older
-test build, uninstall it before installing the current direct-release build.

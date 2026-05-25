@@ -113,3 +113,21 @@ source is maintained separately so this repo can stay small and focused.
 
 See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for model, runtime, and
 third-party notices.
+
+## Language Coverage Notes
+
+- TranslateGemma is the translation-tuned model family. Google describes it as
+  designed for translation tasks across 55 languages.
+- Gemma 4 is a broader general-purpose multilingual model family. Google AI
+  docs describe Gemma 4 as supporting over 140 languages. The Gemma 4 E2B model
+  card is more conservative for practical use: 35+ languages out of the box,
+  with pre-training on 140+ languages.
+- In LoTraQ, TranslateGemma is the purpose-built choice when translation quality
+  for a supported language pair matters most. Gemma 4 is broader multilingual
+  local AI support, not a dedicated translation guarantee for every app locale.
+
+Sources:
+
+- [Google AI Gemma docs](https://ai.google.dev/gemma/docs)
+- [Gemma 4 E2B model card](https://huggingface.co/google/gemma-4-E2B)
+- [TranslateGemma announcement](https://blog.google/innovation-and-ai/technology/developers-tools/translategemma/)
