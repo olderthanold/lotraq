@@ -1,0 +1,23 @@
+# Local/private material
+**/.tooling/
+**/secrets/
+
+# Local Windows development bundle. Publish curated Windows release artifacts
+# under windows/ when they are ready.
+pc/dist/
+
+# Historical local Android test artifacts. The public repo should expose the
+# current direct-release APK unless an old artifact is deliberately restored.
+android/lotraq-mvp-*.apk
+android/lotraq-mvp-*.apk.sha256
+android/lotraq-v1.0.0-release-test-signed.apk
+android/lotraq-v1.0.0-release-test-signed.apk.sha256
+
+# Scratch files
+*.log
+*.tmp
+*.trace
+
+# Local agent instructions / scratch
+AGENTS.md
+AGENTS.czech.md
