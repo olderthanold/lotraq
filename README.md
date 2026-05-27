@@ -14,16 +14,17 @@ locally.
 
 Current public Android build:
 
-- [lotraq-v1.1.0-direct-release-signed.apk](android/lotraq-v1.1.0-direct-release-signed.apk)
-- SHA-256: `c0a2d7d791d61604646213537967ef67e27017fdf848c732cc6f87f39c3eba08`
+- [lotraq-v1.2.0-direct-release-signed.apk](android/lotraq-v1.2.0-direct-release-signed.apk)
+- SHA-256: `2209cdc079c42b8b14c42b76f3af3f165646cdf0ff7fce5fbcf88394c6c026b5`
 - Android 8.0+ / API 26+
 - `arm64-v8a` phones only
 - Package: `com.olderthanold.lotraq`
 
 This is a direct-download APK, not a Play Store release.
 
-See [android/README.md](android/README.md) for Android install, signing, and
-upgrade notes.
+See [android/README.md](android/README.md) for Android install and signing
+notes, and [android/RELEASE_NOTES.md](android/RELEASE_NOTES.md) for Android
+1.2 changes.
 
 ## Windows MVP Download
 
@@ -51,6 +52,9 @@ See [windows/README.md](windows/README.md) for Windows MVP setup and limits.
 - Lets you copy source text, translated text, and history items.
 - Android supports LiteRT-LM `.litertlm` model download, import, delete, and
   visible load status.
+- Android 1.2 adds per-model backend preference, effective backend badges,
+  Gemma MTP/speculative decoding controls, inline memory status, and token
+  speed in status/history.
 - Windows MVP supports local GGUF import and local `llama.cpp` CPU/Vulkan
   inference through a private `127.0.0.1` process.
 - Shows practical runtime feedback such as loaded/not loaded, generation time,
@@ -85,7 +89,7 @@ runtime folders to stay next to `Run-LoTraQ.cmd`.
 
 ## Models
 
-Android 1.1 uses LiteRT-LM models:
+Android 1.2 uses LiteRT-LM models:
 
 | Model | Role | Size | Notes |
 | --- | --- | ---: | --- |
