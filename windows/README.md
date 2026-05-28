@@ -1,21 +1,21 @@
-# LoTraQ Windows MVP
+# LoTraQ Windows 1.2
 
-Current Windows MVP build:
+Current Windows 1.2 build:
 
-- [lotraq_win_MVP.7z](lotraq_win_MVP.7z)
-- SHA-256: `1d27507c918acd1837b4ca729466836e8ed20b746580955bdb6d3250ae51e7f8`
+- [lotraq-windows-v1.2.0-win-x64.7z](lotraq-windows-v1.2.0-win-x64.7z)
+- SHA-256: `d8631b716259477cb8e203e6a58c3d8c5e30dea0744bc2f1eb8483dd69555975`
 - Windows 11 x64
 - Portable 7z archive, no installer
 
-This is a minimal MVP preview. It is intentionally rough and focused on proving
-local Windows translation with GGUF and `llama.cpp`.
+This is a Windows preview focused on local Windows translation with GGUF and
+`llama.cpp`.
 
 The executables are not code signed. Windows SmartScreen or antivirus tools may
 warn before first run.
 
 ## Run
 
-1. Download `lotraq_win_MVP.7z`.
+1. Download `lotraq-windows-v1.2.0-win-x64.7z`.
 2. Extract the 7z archive to a normal writable folder.
 3. Double-click `Run-LoTraQ.cmd`.
 4. Open Settings.
@@ -37,11 +37,12 @@ Keep the extracted folder together. The app, runtime files, and
 - No GGUF model file.
 - No installer.
 - No automatic model download flow.
-- No polished Windows release UX.
+- No polished installer UX.
+- No code signing.
 
 ## Model
 
-The intended MVP model is a local TranslateGemma GGUF file:
+The intended Windows 1.2 model is a local TranslateGemma GGUF file:
 
 - Model: `TranslateGemma 4B IT Q4_K_S GGUF`
 - Expected file name: `translategemma-4b-it.Q4_K_S.gguf`
@@ -52,22 +53,23 @@ The archive does not include this model. Import your own local copy in Settings.
 
 ## Privacy
 
-The Windows MVP runs translation locally. It starts a bundled `llama-server.exe`
+The Windows build runs translation locally. It starts a bundled `llama-server.exe`
 process on `127.0.0.1` and sends the rendered prompt to that local process. It
 does not send source text or translations to a remote server.
 
 Other local processes on the same machine may be able to connect to that
 localhost process while it is running.
 
-The MVP may create local settings, history, cache, temporary, and log files
+The app may create local settings, history, cache, temporary, and log files
 inside the extracted app folder while it runs. If that folder is not writable,
 the app uses `%LOCALAPPDATA%\LoTraQ`.
 
-## Known MVP Limits
+## Known Limits
 
 - Import/select local GGUF is present.
 - Model download, delete, partial resume, and checksum verification are not the
-  Windows MVP flow yet.
+  Windows 1.2 flow yet.
 - Output streaming is not polished yet.
 - CPU can be slow; Vulkan depends on local GPU and driver support.
-- The archive includes debug symbol `.pdb` files because this is an MVP build.
+- The archive includes debug symbol `.pdb` files because this is still a preview
+  build.

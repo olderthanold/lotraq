@@ -2,8 +2,8 @@
 
 Current public Android build:
 
-- [lotraq-v1.2.0-direct-release-signed.apk](lotraq-v1.2.0-direct-release-signed.apk)
-- SHA-256: `2209cdc079c42b8b14c42b76f3af3f165646cdf0ff7fce5fbcf88394c6c026b5`
+- [lotraq-v1.3.0-direct-release-signed.apk](lotraq-v1.3.0-direct-release-signed.apk)
+- SHA-256: `b68b7fccd4a3e1a30236af7cae0f43859884355973836eb1a7970e5a077fa882`
 - Android 8.0+ / API 26+
 - `arm64-v8a` phones only
 - Package: `com.olderthanold.lotraq`
@@ -25,17 +25,16 @@ This is a direct-download APK, not a Play Store release.
 Model files are large, so use Wi-Fi or unlimited data for the first download.
 After a model is installed, translation runs locally.
 
-## What's New In Android 1.2
+## What's New In Android 1.3
 
-- Per-model backend preference: `AUTO`, `GPU`, or `CPU`.
-- Main-screen backend badge for the effective runtime: `GPU`, `CPU slow!`, or
-  `NPU` when reported by the runtime.
-- Per-model MTP/speculative decoding checkbox for supported Gemma 4 models.
-- Inline memory readout and low-memory guidance before large model loads.
-- More detailed runtime diagnostics around load and generation.
-- Token speed in status and new history entries.
-- Safer runtime release when model, backend, MTP, or Android memory state
-  changes.
+- Photo OCR from saved images, editable extracted text, and Translate handoff.
+- Local custom `.litertlm` model imports for non-standard LiteRT-LM models.
+- Numeric per-model context setting with shown default and max.
+- Swipe navigation between Main and Photo OCR.
+- Screen and loaded-model state preserved across orientation changes.
+- Shorter inline memory readout and Settings version display.
+- Custom model import is local-file only; no custom URL or model registry is
+  included in Android 1.3.
 
 See [RELEASE_NOTES.md](RELEASE_NOTES.md) for the full Android release notes.
 

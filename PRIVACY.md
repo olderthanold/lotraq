@@ -14,7 +14,12 @@ model. Current Android standard model downloads use Hugging Face-hosted files.
 That download host may see normal network metadata such as your IP address,
 user agent, and requested file URL.
 
-Windows MVP does not include model download. You import a local GGUF model file.
+Android Photo OCR processes images you select from local storage on the device.
+LoTraQ does not upload selected images or extracted OCR text. Extracted text is
+handled like normal source text and remains local unless you copy or share it
+outside LoTraQ.
+
+Windows 1.2 does not include model download. You import a local GGUF model file.
 During translation it starts a bundled `llama-server.exe` process bound to
 `127.0.0.1` and sends the rendered prompt to that local process only. Other
 local processes on the same machine may be able to connect to that localhost

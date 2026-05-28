@@ -1,6 +1,6 @@
 # LoTraQ
 
-**Free local AI translation. Android direct APK now, Windows MVP preview now.
+**Free local AI translation. Android direct APK now, Windows 1.2 preview now.
 No ads, no account, no cloud translation.**
 
 LoTraQ is built for people who want a practical translator that runs on their
@@ -14,8 +14,8 @@ locally.
 
 Current public Android build:
 
-- [lotraq-v1.2.0-direct-release-signed.apk](android/lotraq-v1.2.0-direct-release-signed.apk)
-- SHA-256: `2209cdc079c42b8b14c42b76f3af3f165646cdf0ff7fce5fbcf88394c6c026b5`
+- [lotraq-v1.3.0-direct-release-signed.apk](android/lotraq-v1.3.0-direct-release-signed.apk)
+- SHA-256: `b68b7fccd4a3e1a30236af7cae0f43859884355973836eb1a7970e5a077fa882`
 - Android 8.0+ / API 26+
 - `arm64-v8a` phones only
 - Package: `com.olderthanold.lotraq`
@@ -24,24 +24,24 @@ This is a direct-download APK, not a Play Store release.
 
 See [android/README.md](android/README.md) for Android install and signing
 notes, and [android/RELEASE_NOTES.md](android/RELEASE_NOTES.md) for Android
-1.2 changes.
+1.3 changes.
 
-## Windows MVP Download
+## Windows 1.2 Download
 
-Current Windows MVP build:
+Current Windows 1.2 build:
 
-- [lotraq_win_MVP.7z](windows/lotraq_win_MVP.7z)
-- SHA-256: `1d27507c918acd1837b4ca729466836e8ed20b746580955bdb6d3250ae51e7f8`
+- [lotraq-windows-v1.2.0-win-x64.7z](windows/lotraq-windows-v1.2.0-win-x64.7z)
+- SHA-256: `d8631b716259477cb8e203e6a58c3d8c5e30dea0744bc2f1eb8483dd69555975`
 - Windows 11 x64
 - Portable 7z archive, no installer
 - Includes the LoTraQ WPF app and pinned local `llama.cpp` CPU/Vulkan runtimes
 - Does not include a GGUF model
 
-This is a very small MVP preview. It is useful for local GGUF testing, but it
-is not a polished Windows product yet. The Windows MVP executables are not code
-signed, so Windows SmartScreen or antivirus tools may warn before first run.
+This is a Windows preview focused on local GGUF translation with a bundled
+`llama.cpp` runtime. The Windows executables are not code signed, so Windows
+SmartScreen or antivirus tools may warn before first run.
 
-See [windows/README.md](windows/README.md) for Windows MVP setup and limits.
+See [windows/README.md](windows/README.md) for Windows 1.2 setup and limits.
 
 ## What It Does
 
@@ -52,10 +52,10 @@ See [windows/README.md](windows/README.md) for Windows MVP setup and limits.
 - Lets you copy source text, translated text, and history items.
 - Android supports LiteRT-LM `.litertlm` model download, import, delete, and
   visible load status.
-- Android 1.2 adds per-model backend preference, effective backend badges,
-  Gemma MTP/speculative decoding controls, inline memory status, and token
-  speed in status/history.
-- Windows MVP supports local GGUF import and local `llama.cpp` CPU/Vulkan
+- Android 1.3 adds Photo OCR for saved images, custom local `.litertlm` model
+  imports, per-model context settings, and 1.2 runtime controls such as
+  backend preference, MTP, memory status, and token speed.
+- Windows 1.2 supports local GGUF import and local `llama.cpp` CPU/Vulkan
   inference through a private `127.0.0.1` process.
 - Shows practical runtime feedback such as loaded/not loaded, generation time,
   first-token latency, output tokens, and speed where available.
@@ -75,21 +75,26 @@ See [windows/README.md](windows/README.md) for Windows MVP setup and limits.
 Model files are large, so use Wi-Fi or unlimited data for the first download.
 After a model is installed, translation runs locally.
 
-## Windows MVP Quick Start
+Android 1.3 can also open Photo OCR from the main screen, attach a saved image,
+extract editable Latin-script text locally, and hand it off to translation.
+Custom models are local `.litertlm` imports from Settings; there is no custom
+URL or model-registry flow.
 
-1. Download `lotraq_win_MVP.7z`.
+## Windows 1.2 Quick Start
+
+1. Download `lotraq-windows-v1.2.0-win-x64.7z`.
 2. Extract the 7z archive to a normal writable folder.
 3. Double-click `Run-LoTraQ.cmd`.
 4. Open Settings.
 5. Use `Import GGUF` and select a local TranslateGemma GGUF model.
 6. Return to Main, choose languages, paste text, then translate.
 
-Keep the extracted folder together. The MVP expects its app files and bundled
+Keep the extracted folder together. The Windows app expects its app files and bundled
 runtime folders to stay next to `Run-LoTraQ.cmd`.
 
 ## Models
 
-Android 1.2 uses LiteRT-LM models:
+Android 1.3 uses LiteRT-LM models:
 
 | Model | Role | Size | Notes |
 | --- | --- | ---: | --- |
@@ -97,18 +102,22 @@ Android 1.2 uses LiteRT-LM models:
 | TranslateGemma 4B INT4 LiteRT-LM | Optional | 2.01 GB | Translation-tuned; CPU fallback is slow on the tested phone. |
 | Gemma 4 E4B IT LiteRT-LM | Optional | 3.66 GB | Larger memory-pressure test; may fail on smaller phones. |
 
-Windows MVP uses GGUF through `llama.cpp` and does not bundle a model:
+Android also accepts unknown imported `.litertlm` files as local custom models.
+Custom model quality, language behavior, and resource use depend on the model.
+
+Windows 1.2 uses GGUF through `llama.cpp` and does not bundle a model:
 
 | Model | Role | Size | Notes |
 | --- | --- | ---: | --- |
-| TranslateGemma 4B IT Q4_K_S GGUF | Suggested MVP model | 2.38 GB | Validated local smoke candidate; import your own local file. |
+| TranslateGemma 4B IT Q4_K_S GGUF | Suggested Windows model | 2.38 GB | Validated local smoke candidate; import your own local file. |
 
 ## Privacy
 
 LoTraQ does not require an account and does not send your source text or
 translations to a server. Android can connect to model hosts when you download
-a model. Windows MVP uses local model import and local `127.0.0.1` inference.
-See [PRIVACY.md](PRIVACY.md).
+a model. Android Photo OCR processes selected saved images locally and does not
+upload images or extracted text. Windows 1.2 uses local model import and local
+`127.0.0.1` inference. See [PRIVACY.md](PRIVACY.md).
 
 ## Source
 
