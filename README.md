@@ -14,8 +14,8 @@ locally.
 
 Current public Android build:
 
-- [lotraq-v1.3.0-direct-release-signed.apk](android/lotraq-v1.3.0-direct-release-signed.apk)
-- SHA-256: `b68b7fccd4a3e1a30236af7cae0f43859884355973836eb1a7970e5a077fa882`
+- [lotraq-v1.4.0-direct-release-signed.apk](android/lotraq-v1.4.0-direct-release-signed.apk)
+- SHA-256: `6210f372ee122e7cda644d2c5ee9e3477345a623201bb6948560442063d4cc75`
 - Android 8.0+ / API 26+
 - `arm64-v8a` phones only
 - Package: `com.olderthanold.lotraq`
@@ -24,7 +24,7 @@ This is a direct-download APK, not a Play Store release.
 
 See [android/README.md](android/README.md) for Android install and signing
 notes, and [android/RELEASE_NOTES.md](android/RELEASE_NOTES.md) for Android
-1.3 changes.
+1.4 changes.
 
 ## Windows 1.2 Download
 
@@ -52,9 +52,11 @@ See [windows/README.md](windows/README.md) for Windows 1.2 setup and limits.
 - Lets you copy source text, translated text, and history items.
 - Android supports LiteRT-LM `.litertlm` model download, import, delete, and
   visible load status.
-- Android 1.3 adds Photo OCR for saved images, custom local `.litertlm` model
-  imports, per-model context settings, and 1.2 runtime controls such as
-  backend preference, MTP, memory status, and token speed.
+- Android 1.4 adds Simple/Advanced Settings and Photo OCR camera capture with
+  app-private temporary photos and explicit Save pic.
+- Android also supports saved-image OCR, custom local `.litertlm` model
+  imports, per-model context settings, backend preference, MTP, memory status,
+  and token speed.
 - Windows 1.2 supports local GGUF import and local `llama.cpp` CPU/Vulkan
   inference through a private `127.0.0.1` process.
 - Shows practical runtime feedback such as loaded/not loaded, generation time,
@@ -75,10 +77,11 @@ See [windows/README.md](windows/README.md) for Windows 1.2 setup and limits.
 Model files are large, so use Wi-Fi or unlimited data for the first download.
 After a model is installed, translation runs locally.
 
-Android 1.3 can also open Photo OCR from the main screen, attach a saved image,
-extract editable Latin-script text locally, and hand it off to translation.
-Custom models are local `.litertlm` imports from Settings; there is no custom
-URL or model-registry flow.
+Android 1.4 can open Photo OCR from the main screen, attach a saved image or
+capture a temporary camera photo, extract editable Latin-script text locally,
+and hand it off to translation. Captured OCR photos stay in app-private cache
+unless you explicitly use Save pic. Custom models are local `.litertlm` imports
+from Settings; there is no custom URL or model-registry flow.
 
 ## Windows 1.2 Quick Start
 
@@ -94,7 +97,7 @@ runtime folders to stay next to `Run-LoTraQ.cmd`.
 
 ## Models
 
-Android 1.3 uses LiteRT-LM models:
+Android 1.4 uses LiteRT-LM models:
 
 | Model | Role | Size | Notes |
 | --- | --- | ---: | --- |
@@ -115,9 +118,9 @@ Windows 1.2 uses GGUF through `llama.cpp` and does not bundle a model:
 
 LoTraQ does not require an account and does not send your source text or
 translations to a server. Android can connect to model hosts when you download
-a model. Android Photo OCR processes selected saved images locally and does not
-upload images or extracted text. Windows 1.2 uses local model import and local
-`127.0.0.1` inference. See [PRIVACY.md](PRIVACY.md).
+a model. Android Photo OCR processes selected or captured images locally and
+does not upload images or extracted text. Windows 1.2 uses local model import
+and local `127.0.0.1` inference. See [PRIVACY.md](PRIVACY.md).
 
 ## Source
 

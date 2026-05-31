@@ -2,8 +2,8 @@
 
 Current public Android build:
 
-- [lotraq-v1.3.0-direct-release-signed.apk](lotraq-v1.3.0-direct-release-signed.apk)
-- SHA-256: `b68b7fccd4a3e1a30236af7cae0f43859884355973836eb1a7970e5a077fa882`
+- [lotraq-v1.4.0-direct-release-signed.apk](lotraq-v1.4.0-direct-release-signed.apk)
+- SHA-256: `6210f372ee122e7cda644d2c5ee9e3477345a623201bb6948560442063d4cc75`
 - Android 8.0+ / API 26+
 - `arm64-v8a` phones only
 - Package: `com.olderthanold.lotraq`
@@ -25,16 +25,18 @@ This is a direct-download APK, not a Play Store release.
 Model files are large, so use Wi-Fi or unlimited data for the first download.
 After a model is installed, translation runs locally.
 
-## What's New In Android 1.3
+## What's New In Android 1.4
 
-- Photo OCR from saved images, editable extracted text, and Translate handoff.
-- Local custom `.litertlm` model imports for non-standard LiteRT-LM models.
-- Numeric per-model context setting with shown default and max.
-- Swipe navigation between Main and Photo OCR.
-- Screen and loaded-model state preserved across orientation changes.
-- Shorter inline memory readout and Settings version display.
-- Custom model import is local-file only; no custom URL or model registry is
-  included in Android 1.3.
+- Simple/Advanced Settings mode.
+- Simple Settings keeps only theme, translation instructions, and standard
+  model Select buttons.
+- Advanced Settings keeps model download/import/delete, backend, context, MTP,
+  sampling, and status controls.
+- Photo OCR can now capture a temporary camera photo.
+- Captured OCR photos stay in app-private cache by default.
+- Save pic explicitly preserves the current OCR image.
+- Old temporary OCR camera cache is cleaned automatically.
+- Help dialogs are structured into short readable sections.
 
 See [RELEASE_NOTES.md](RELEASE_NOTES.md) for the full Android release notes.
 

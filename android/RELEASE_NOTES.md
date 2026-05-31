@@ -1,5 +1,51 @@
 # LoTraQ Android Release Notes
 
+## 1.4.0 - 2026-05-29
+
+Download:
+
+- [lotraq-v1.4.0-direct-release-signed.apk](lotraq-v1.4.0-direct-release-signed.apk)
+- SHA-256: `6210f372ee122e7cda644d2c5ee9e3477345a623201bb6948560442063d4cc75`
+- Android `versionName`: `1.4.0`
+- Android `versionCode`: `140`
+- Package: `com.olderthanold.lotraq`
+
+New in Android 1.4:
+
+- Added persistent Simple/Advanced Settings mode.
+- Kept Main unchanged.
+- Kept Advanced as the default so setup controls remain visible on fresh
+  installs.
+- Simple Settings shows only mode, theme, translation instructions, and the
+  three standard model rows with Select.
+- Added Photo OCR camera capture through the system camera.
+- Kept captured OCR photos temporary in app-private cache by default.
+- Added explicit Save pic action for preserving the current OCR image.
+- Added daily cleanup for old temporary OCR camera files.
+- Reworked app help dialogs into short readable sections.
+- Made Settings help mode-aware for Simple and Advanced.
+
+Still intentionally not exposed in Android 1.4:
+
+- No user-facing max-output control.
+- No thinking-mode UI.
+- No Android NPU backend selector.
+- No full Easy/Pro/Debug mode surfaces.
+- No custom URL, Hugging Face resolver, or custom model registry.
+- No Word/document translation.
+- No translation memory/session context.
+- OCR is Latin-script text recognition only in Android 1.4.
+
+Signing:
+
+Android 1.4.0 is signed with the same direct-download release certificate:
+
+`CN=LoTraQ Android Direct Release, O=olderthanold, C=CZ`
+
+Certificate SHA-256:
+
+`9442929100009509128be02aace10cae4be0fed5d678cc1408cd649e32288d5c`
+
 ## 1.3.0 - 2026-05-29
 
 Download:
