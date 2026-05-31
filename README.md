@@ -31,7 +31,7 @@ notes, and [android/RELEASE_NOTES.md](android/RELEASE_NOTES.md) for Android
 Current Windows 1.2 build:
 
 - [lotraq-windows-v1.2.0-win-x64.7z](windows/lotraq-windows-v1.2.0-win-x64.7z)
-- SHA-256: `d8631b716259477cb8e203e6a58c3d8c5e30dea0744bc2f1eb8483dd69555975`
+- SHA-256: `2f76a108f0c5174a6e872c0f4ba846dc0a0b53e116a455fe06316199625920fa`
 - Windows 11 x64
 - Portable 7z archive, no installer
 - Includes the LoTraQ WPF app and pinned local `llama.cpp` CPU/Vulkan runtimes
@@ -41,7 +41,8 @@ This is a Windows preview focused on local GGUF translation with a bundled
 `llama.cpp` runtime. The Windows executables are not code signed, so Windows
 SmartScreen or antivirus tools may warn before first run.
 
-See [windows/README.md](windows/README.md) for Windows 1.2 setup and limits.
+See [windows/README.md](windows/README.md) for Windows 1.2 setup and limits,
+and [windows/RELEASE_NOTES.md](windows/RELEASE_NOTES.md) for rerelease notes.
 
 ## What It Does
 
@@ -61,8 +62,9 @@ See [windows/README.md](windows/README.md) for Windows 1.2 setup and limits.
 - Android also supports saved-image OCR, custom local `.litertlm` model
   imports, per-model context settings, backend preference, MTP, memory status,
   and token speed.
-- Windows 1.2 supports local GGUF import and local `llama.cpp` CPU/Vulkan
-  inference through a private `127.0.0.1` process.
+- Windows 1.2 supports standard GGUF download, external GGUF references,
+  streaming output, same-language rewrite/cleanup, thinking separation, and
+  local `llama.cpp` CPU/Vulkan inference through a private `127.0.0.1` process.
 - Shows practical runtime feedback such as loaded/not loaded, generation time,
   first-token latency, output tokens, and speed where available.
 
@@ -95,7 +97,8 @@ model-registry flow.
 2. Extract the 7z archive to a normal writable folder.
 3. Double-click `Run-LoTraQ.cmd`.
 4. Open Settings.
-5. Use `Import GGUF` and select a local TranslateGemma GGUF model.
+5. Use `Download` for the standard TranslateGemma GGUF, or `Add GGUF` to
+   reference an existing local GGUF file.
 6. Return to Main, choose languages, paste text, then translate.
 
 Keep the extracted folder together. The Windows app expects its app files and bundled
@@ -120,7 +123,7 @@ Windows 1.2 uses GGUF through `llama.cpp` and does not bundle a model:
 
 | Model | Role | Size | Notes |
 | --- | --- | ---: | --- |
-| TranslateGemma 4B IT Q4_K_S GGUF | Suggested Windows model | 2.38 GB | Validated local smoke candidate; import your own local file. |
+| TranslateGemma 4B IT Q4_K_S GGUF | Suggested Windows model | 2.38 GB | Download in Settings or reference your own local file. |
 
 ## Privacy
 
@@ -128,7 +131,8 @@ LoTraQ does not require an account and does not send your source text or
 translations to a server. Android can connect to model hosts when you download
 a model. Android Photo OCR processes selected or captured images locally with
 Latin OCR or installed Gemma OCR models and does not upload images or extracted
-text. Windows 1.2 uses local model import and local `127.0.0.1` inference. See
+text. Windows 1.2 can download the standard GGUF model, reference an external
+local GGUF file, and uses local `127.0.0.1` inference. See
 [PRIVACY.md](PRIVACY.md).
 
 ## Source

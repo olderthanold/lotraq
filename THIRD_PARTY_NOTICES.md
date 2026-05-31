@@ -30,7 +30,7 @@ upstream licenses. These upstream components are not owned by this repository.
   - `llama.cpp` release: `b9305`
   - `llama.cpp` commit: `63248fc3e33e6f3b579dce6a743fd6ce8939af9c`
 - The Windows 1.2 archive does not include a GGUF model.
-- The suggested local Windows model is `TranslateGemma 4B IT Q4_K_S GGUF`,
+- Windows 1.2 can download or reference `TranslateGemma 4B IT Q4_K_S GGUF`,
   sourced separately from `mradermacher/translategemma-4b-it-GGUF`.
 
 Check the upstream projects and model pages for their current licenses,

@@ -3,7 +3,7 @@
 Current Windows 1.2 build:
 
 - [lotraq-windows-v1.2.0-win-x64.7z](lotraq-windows-v1.2.0-win-x64.7z)
-- SHA-256: `d8631b716259477cb8e203e6a58c3d8c5e30dea0744bc2f1eb8483dd69555975`
+- SHA-256: `2f76a108f0c5174a6e872c0f4ba846dc0a0b53e116a455fe06316199625920fa`
 - Windows 11 x64
 - Portable 7z archive, no installer
 
@@ -13,13 +13,18 @@ This is a Windows preview focused on local Windows translation with GGUF and
 The executables are not code signed. Windows SmartScreen or antivirus tools may
 warn before first run.
 
+This rerelease replaces the earlier Windows 1.2 archive. It keeps the same
+version number and fixes model-management, streaming/thinking, and
+same-language rewrite gaps from the first Windows 1.2 package.
+
 ## Run
 
 1. Download `lotraq-windows-v1.2.0-win-x64.7z`.
 2. Extract the 7z archive to a normal writable folder.
 3. Double-click `Run-LoTraQ.cmd`.
 4. Open Settings.
-5. Use `Import GGUF` and select a local TranslateGemma GGUF model.
+5. Use `Download` for the standard TranslateGemma GGUF, or `Add GGUF` to
+   reference an existing local GGUF file.
 6. Return to Main, choose languages, paste text, then translate.
 
 Keep the extracted folder together. The app, runtime files, and
@@ -36,7 +41,7 @@ Keep the extracted folder together. The app, runtime files, and
 
 - No GGUF model file.
 - No installer.
-- No automatic model download flow.
+- No bundled model file.
 - No polished installer UX.
 - No code signing.
 
@@ -49,7 +54,23 @@ The intended Windows 1.2 model is a local TranslateGemma GGUF file:
 - Expected size: `2,377,945,600` bytes
 - Expected SHA-256: `95c62e1c29f977c84fe5a5d9602a91213fd03a2c7b63f2884abab2ed7b5c5f57`
 
-The archive does not include this model. Import your own local copy in Settings.
+The archive does not include this model. Download it in Settings, or add your
+own local copy.
+
+## Rerelease Notes
+
+- Standard TranslateGemma GGUF download is available from Settings.
+- `Add GGUF` references an existing local file without copying or renaming it.
+- `Delete` removes app-owned downloaded models; external GGUF files are removed
+  from LoTraQ profiles only and are not deleted from disk.
+- Streaming output is enabled by default.
+- Thinking-capable chat models keep reasoning in a collapsed Thinking panel and
+  final text in Translation.
+- Sampling, streaming, and thinking changes do not reload the model; model,
+  backend, and context changes still require reload.
+- Matching source and target languages are valid rewrite/cleanup tasks driven
+  by the active instructions.
+- Leading model labels such as `Translation:` are stripped from final output.
 
 ## Privacy
 
@@ -66,10 +87,14 @@ the app uses `%LOCALAPPDATA%\LoTraQ`.
 
 ## Known Limits
 
-- Import/select local GGUF is present.
-- Model download, delete, partial resume, and checksum verification are not the
-  Windows 1.2 flow yet.
-- Output streaming is not polished yet.
+- Settings can download the standard TranslateGemma GGUF, reference an external
+  GGUF file, and remove/delete model profiles.
+- Streaming output is enabled by default.
+- Thinking mode is model-specific. Qwen-style thinking is usable; Nanbeige
+  thinking is separated but low quality and should usually stay disabled.
+- Matching source and target languages are allowed for rewrite/cleanup tasks.
+- In-app help/tooltips for model management, backend, context, streaming, and
+  thinking are still deferred.
 - CPU can be slow; Vulkan depends on local GPU and driver support.
 - The archive includes debug symbol `.pdb` files because this is still a preview
   build.

@@ -22,16 +22,19 @@ app-private cache files by default; they are not saved to gallery/storage unless
 you explicitly use Save pic. Extracted text is handled like normal source text
 and remains local unless you copy or share it outside LoTraQ.
 
-Windows 1.2 does not include model download. You import a local GGUF model file.
-During translation it starts a bundled `llama-server.exe` process bound to
-`127.0.0.1` and sends the rendered prompt to that local process only. Other
-local processes on the same machine may be able to connect to that localhost
-process while it is running.
+Windows 1.2 can download the standard TranslateGemma GGUF model when you ask it
+to, or reference an existing local GGUF file through `Add GGUF`. The model
+download host may see normal network metadata such as your IP address, user
+agent, and requested file URL. During translation Windows starts a bundled
+`llama-server.exe` process bound to `127.0.0.1` and sends the rendered prompt
+to that local process only. Other local processes on the same machine may be
+able to connect to that localhost process while it is running.
 
 LoTraQ may store local app data such as settings, translation history, model
-paths, cache, temporary files, and runtime logs on your device or in the
-extracted Windows app folder. If the Windows folder is not writable, the app
-uses `%LOCALAPPDATA%\LoTraQ`. This data is not uploaded by LoTraQ.
+paths, downloaded model files, cache, temporary files, and runtime logs on your
+device or in the extracted Windows app folder. If the Windows folder is not
+writable, the app uses `%LOCALAPPDATA%\LoTraQ`. This data is not uploaded by
+LoTraQ.
 
 After a model is installed or imported, normal translation does not need a
 network connection.
