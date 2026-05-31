@@ -15,8 +15,9 @@ That download host may see normal network metadata such as your IP address,
 user agent, and requested file URL.
 
 Android Photo OCR processes images you select from local storage or capture
-through the system camera on the device. LoTraQ does not upload selected images,
-captured images, or extracted OCR text. Camera captures are temporary
+through the system camera on the device. OCR runs locally, either through Latin
+ML Kit OCR or an installed Gemma OCR model. LoTraQ does not upload selected
+images, captured images, or extracted OCR text. Camera captures are temporary
 app-private cache files by default; they are not saved to gallery/storage unless
 you explicitly use Save pic. Extracted text is handled like normal source text
 and remains local unless you copy or share it outside LoTraQ.

@@ -1,5 +1,56 @@
 # LoTraQ Android Release Notes
 
+## 1.5.0 - 2026-05-31
+
+Download:
+
+- [lotraq-v1.5.0-direct-release-signed.apk](lotraq-v1.5.0-direct-release-signed.apk)
+- SHA-256: `0562a0ac897562c03be1dfafd6d85903c1ff376bf485df299913feddabcde946`
+- Android `versionName`: `1.5.0`
+- Android `versionCode`: `150`
+- Package: `com.olderthanold.lotraq`
+
+New in Android 1.5:
+
+- Added Model OCR for installed Gemma 4 E2B/E4B vision-capable LiteRT-LM
+  models.
+- Kept fast Latin ML Kit OCR as the default OCR engine.
+- Added persistent OCR engine dropdown: Latin OCR plus installed Gemma OCR
+  engines.
+- Made OCR model selection independent from the selected translation model.
+- Added OCR runtime status for ready, loading, extracting, and failure states.
+- Configured LiteRT-LM vision backend and image input for Gemma 4 E2B/E4B OCR.
+- Kept standard model Select, Download, and Delete actions visible in Simple
+  Settings.
+- Allowed same-language Source and Target as rewrite mode driven by Translation
+  instructions.
+- Documented that custom model OCR capability cannot be auto-detected with the
+  current LiteRT-LM 0.12.0 capability API.
+
+Still intentionally not exposed in Android 1.5:
+
+- No user-facing max-output control.
+- No thinking-mode UI.
+- No Android NPU backend selector.
+- No full Easy/Pro/Debug mode surfaces.
+- No custom URL, Hugging Face resolver, or custom model registry.
+- Custom models are local `.litertlm` imports only.
+- Latin OCR is Latin-script text recognition only.
+- Model OCR is listed only for installed standard Gemma 4 E2B/E4B models.
+- Custom `.litertlm` OCR support is not auto-detected or exposed.
+- No Word/document translation.
+- No translation memory/session context.
+
+Signing:
+
+Android 1.5.0 is signed with the same direct-download release certificate:
+
+`CN=LoTraQ Android Direct Release, O=olderthanold, C=CZ`
+
+Certificate SHA-256:
+
+`9442929100009509128be02aace10cae4be0fed5d678cc1408cd649e32288d5c`
+
 ## 1.4.0 - 2026-05-29
 
 Download:
