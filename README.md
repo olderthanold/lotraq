@@ -8,7 +8,7 @@ own device. Paste text, choose languages, load a local AI model, translate, and
 copy the result. After a model is downloaded or imported, translation runs
 locally.
 
-<img src="assets/lotraq-android-main.png" alt="LoTraQ Android translating Czech text to English" width="360">
+<img src="assets/lotraq1-5.jpg" alt="LoTraQ Android translating Czech text to English" width="360">
 
 ## Android Download
 
@@ -88,8 +88,7 @@ capture a temporary camera photo, extract editable text locally, and hand it
 off to translation. Latin OCR is fast and Latin-script only. Installed Gemma 4
 E2B/E4B models can also be selected as OCR engines for model OCR. Captured OCR
 photos stay in app-private cache unless you explicitly use Save pic. Custom
-models are local `.litertlm` imports from Settings; there is no custom URL or
-model-registry flow.
+models are local `.litertlm` imports from Settings.
 
 ## Windows 1.2 Quick Start
 
@@ -116,8 +115,7 @@ Android 1.5 uses LiteRT-LM models:
 
 Android also accepts unknown imported `.litertlm` files as local custom models.
 Custom model quality, language behavior, and resource use depend on the model.
-Custom model OCR capability is not auto-detected in Android 1.5; model OCR is
-listed only for installed standard Gemma 4 E2B/E4B models.
+Model OCR is available for installed standard Gemma 4 E2B/E4B models.
 
 Windows 1.2 uses GGUF through `llama.cpp` and does not bundle a model:
 

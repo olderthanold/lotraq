@@ -35,7 +35,6 @@ After a model is installed, translation runs locally.
 - Simple Settings keeps standard model Select, Download, and Delete actions.
 - Same-language Source and Target now run rewrite mode using Translation
   instructions.
-- Custom model OCR capability is not auto-detected in Android 1.5.
 
 See [RELEASE_NOTES.md](RELEASE_NOTES.md) for the full Android release notes.
 

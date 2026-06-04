@@ -24,22 +24,6 @@ New in Android 1.5:
   Settings.
 - Allowed same-language Source and Target as rewrite mode driven by Translation
   instructions.
-- Documented that custom model OCR capability cannot be auto-detected with the
-  current LiteRT-LM 0.12.0 capability API.
-
-Still intentionally not exposed in Android 1.5:
-
-- No user-facing max-output control.
-- No thinking-mode UI.
-- No Android NPU backend selector.
-- No full Easy/Pro/Debug mode surfaces.
-- No custom URL, Hugging Face resolver, or custom model registry.
-- Custom models are local `.litertlm` imports only.
-- Latin OCR is Latin-script text recognition only.
-- Model OCR is listed only for installed standard Gemma 4 E2B/E4B models.
-- Custom `.litertlm` OCR support is not auto-detected or exposed.
-- No Word/document translation.
-- No translation memory/session context.
 
 Signing:
 
@@ -75,17 +59,6 @@ New in Android 1.4:
 - Added daily cleanup for old temporary OCR camera files.
 - Reworked app help dialogs into short readable sections.
 - Made Settings help mode-aware for Simple and Advanced.
-
-Still intentionally not exposed in Android 1.4:
-
-- No user-facing max-output control.
-- No thinking-mode UI.
-- No Android NPU backend selector.
-- No full Easy/Pro/Debug mode surfaces.
-- No custom URL, Hugging Face resolver, or custom model registry.
-- No Word/document translation.
-- No translation memory/session context.
-- OCR is Latin-script text recognition only in Android 1.4.
 
 Signing:
 
@@ -126,17 +99,6 @@ New in Android 1.3:
 - Added Settings version display.
 - Shortened the inline memory readout.
 
-Still intentionally not exposed in Android 1.3:
-
-- No user-facing max-output control.
-- No thinking-mode UI.
-- No Android NPU backend selector.
-- No camera capture; OCR uses saved image attach only.
-- OCR is Latin-script text recognition only in Android 1.3.
-- No custom URL, Hugging Face resolver, or custom model registry.
-- No Word/document translation.
-- No translation memory/session context.
-
 Signing:
 
 Android 1.3.0 is signed with the same direct-download release certificate:
@@ -174,16 +136,6 @@ New in Android 1.2:
 - Improved status speed to prefer `tok/s`.
 - Added token speed to new history entries.
 - Clarified Help text for low memory and MTP behavior.
-
-Still intentionally not exposed in Android 1.2:
-
-- No user-facing context-size slider.
-- No user-facing max-output control.
-- No thinking-mode UI.
-- No Android NPU backend selector.
-- No camera/image translation.
-- No Word/document translation.
-- No translation memory/session context.
 
 Signing:
 
