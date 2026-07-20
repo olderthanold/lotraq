@@ -8,7 +8,7 @@ upstream licenses. These upstream components are not owned by this repository.
 - LoTraQ Android uses Google AI Edge LiteRT-LM runtime components.
 - Android Photo OCR uses Google ML Kit Text Recognition
   (`com.google.mlkit:text-recognition`) for selected local images.
-- Android 1.5 Model OCR uses installed Gemma 4 E2B/E4B LiteRT-LM models through
+- Android Model OCR uses installed Gemma 4 E2B/E4B LiteRT-LM models through
   Google AI Edge LiteRT-LM image input.
 - Android Photo OCR camera capture uses AndroidX Core `FileProvider` for
   app-private temporary camera image files.

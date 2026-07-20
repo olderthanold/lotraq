@@ -1,5 +1,32 @@
 # LoTraQ Android Release Notes
 
+## 1.5.1 - 2026-07-20
+
+Download:
+
+- [lotraq-v1.5.1-direct-release-signed.apk](lotraq-v1.5.1-direct-release-signed.apk)
+- SHA-256: `6290937ff3516a3a7b37198e9758475a60690dae7fdc81e7fca6c8704418ccd6`
+- Android `versionName`: `1.5.1`
+- Android `versionCode`: `151`
+- Package: `com.olderthanold.lotraq`
+
+New in Android 1.5.1:
+
+- Upgraded the Android LiteRT-LM runtime dependency from `0.12.0` to `0.14.0`.
+- Kept the Android 1.5 app behavior and model set unchanged.
+- Smoke-tested signed install, model auto-load, and TranslateGemma 4B CPU
+  translation on the connected Samsung SM-S911B.
+
+Signing:
+
+Android 1.5.1 is signed with the same direct-download release certificate:
+
+`CN=LoTraQ Android Direct Release, O=olderthanold, C=CZ`
+
+Certificate SHA-256:
+
+`9442929100009509128be02aace10cae4be0fed5d678cc1408cd649e32288d5c`
+
 ## 1.5.0 - 2026-05-31
 
 Download:

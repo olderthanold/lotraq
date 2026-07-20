@@ -2,8 +2,8 @@
 
 Current public Android build:
 
-- [lotraq-v1.5.0-direct-release-signed.apk](lotraq-v1.5.0-direct-release-signed.apk)
-- SHA-256: `0562a0ac897562c03be1dfafd6d85903c1ff376bf485df299913feddabcde946`
+- [lotraq-v1.5.1-direct-release-signed.apk](lotraq-v1.5.1-direct-release-signed.apk)
+- SHA-256: `6290937ff3516a3a7b37198e9758475a60690dae7fdc81e7fca6c8704418ccd6`
 - Android 8.0+ / API 26+
 - `arm64-v8a` phones only
 - Package: `com.olderthanold.lotraq`
@@ -25,7 +25,12 @@ This is a direct-download APK, not a Play Store release.
 Model files are large, so use Wi-Fi or unlimited data for the first download.
 After a model is installed, translation runs locally.
 
-## What's New In Android 1.5
+## What's New In Android 1.5.1
+
+- Upgraded the Android LiteRT-LM runtime to `0.14.0`.
+- Preserves the Android 1.5 feature set and direct-release signing lineage.
+
+Android 1.5 also includes:
 
 - Model OCR path for installed Gemma 4 E2B/E4B vision-capable LiteRT-LM models.
 - Persistent OCR engine dropdown: Latin OCR plus installed Gemma OCR engines.

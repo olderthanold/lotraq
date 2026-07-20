@@ -14,8 +14,8 @@ locally.
 
 Current public Android build:
 
-- [lotraq-v1.5.0-direct-release-signed.apk](android/lotraq-v1.5.0-direct-release-signed.apk)
-- SHA-256: `0562a0ac897562c03be1dfafd6d85903c1ff376bf485df299913feddabcde946`
+- [lotraq-v1.5.1-direct-release-signed.apk](android/lotraq-v1.5.1-direct-release-signed.apk)
+- SHA-256: `6290937ff3516a3a7b37198e9758475a60690dae7fdc81e7fca6c8704418ccd6`
 - Android 8.0+ / API 26+
 - `arm64-v8a` phones only
 - Package: `com.olderthanold.lotraq`
@@ -24,7 +24,7 @@ This is a direct-download APK, not a Play Store release.
 
 See [android/README.md](android/README.md) for Android install and signing
 notes, and [android/RELEASE_NOTES.md](android/RELEASE_NOTES.md) for Android
-1.5 changes.
+1.5.1 changes.
 
 ## Windows 1.2 Download
 
@@ -53,9 +53,9 @@ and [windows/RELEASE_NOTES.md](windows/RELEASE_NOTES.md) for rerelease notes.
 - Lets you copy source text, translated text, and history items.
 - Android supports LiteRT-LM `.litertlm` model download, import, delete, and
   visible load status.
-- Android 1.5 adds model-backed OCR for installed Gemma 4 E2B/E4B vision
+- Android 1.5+ adds model-backed OCR for installed Gemma 4 E2B/E4B vision
   models, while keeping fast Latin OCR as the default.
-- Android 1.5 allows same-language Source and Target as rewrite mode driven by
+- Android 1.5+ allows same-language Source and Target as rewrite mode driven by
   Translation instructions.
 - Android 1.4 added Simple/Advanced Settings and Photo OCR camera capture with
   app-private temporary photos and explicit Save pic.
@@ -83,7 +83,7 @@ and [windows/RELEASE_NOTES.md](windows/RELEASE_NOTES.md) for rerelease notes.
 Model files are large, so use Wi-Fi or unlimited data for the first download.
 After a model is installed, translation runs locally.
 
-Android 1.5 can open Photo OCR from the main screen, attach a saved image or
+Android can open Photo OCR from the main screen, attach a saved image or
 capture a temporary camera photo, extract editable text locally, and hand it
 off to translation. Latin OCR is fast and Latin-script only. Installed Gemma 4
 E2B/E4B models can also be selected as OCR engines for model OCR. Captured OCR
@@ -105,7 +105,7 @@ runtime folders to stay next to `Run-LoTraQ.cmd`.
 
 ## Models
 
-Android 1.5 uses LiteRT-LM models:
+Android 1.5.1 uses LiteRT-LM models:
 
 | Model | Role | Size | Notes |
 | --- | --- | ---: | --- |
